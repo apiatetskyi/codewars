@@ -181,3 +181,24 @@ console.log(howMuchILoveYou(7));
 console.log(howMuchILoveYou(4));
 console.log(howMuchILoveYou(6));
 console.log(howMuchILoveYou(2));
+
+
+// Prototype in JS
+
+var gadget = {
+  power: true,
+  size: ''
+};
+
+function MobilePhone(brand, model) {
+  this.brand = brand;
+  this.model = model;
+}
+
+MobilePhone.prototype.__proto__ = gadget;
+
+var emptyArray = new Array(3);
+
+console.log(new MobilePhone('Apple', 'Iphone 7'));
+console.log(emptyArray);
+
