@@ -195,10 +195,28 @@ function MobilePhone(brand, model) {
   this.model = model;
 }
 
-MobilePhone.prototype.__proto__ = gadget;
+MobilePhone.prototype = gadget;
+MobilePhone.prototype.constructor = MobilePhone;
 
 var emptyArray = new Array(3);
 
 console.log(new MobilePhone('Apple', 'Iphone 7'));
 console.log(emptyArray);
 
+
+// Find the capitals
+
+function capitals(word) {
+  var capitalChar = [];
+
+  for (var i = 0; i < word.length; i++) {
+    var char = word.charAt(i);
+
+    if (char == char.toUpperCase()) {
+      capitalChar.push(i);
+    }
+
+  }
+
+  return capitalChar;
+}
