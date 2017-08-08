@@ -220,3 +220,44 @@ function capitals(word) {
 
   return capitalChar;
 }
+
+
+// Broken sequence
+
+function findMissingNumber(sequence){
+  function compareNumeric(a, b) {
+    return a - b;
+  }
+
+  if (sequence) {
+    var sequenceArray = sequence.split(' ').map(function(sequenceItem){
+      return Number(sequenceItem);
+    }).sort(compareNumeric),
+        isCorrect = sequenceArray.every(function(item){
+          return !isNaN(item);
+        }),
+        correctItem;
+        console.log(isCorrect);
+
+    if (isCorrect) {
+      for (var i = 0; i < sequenceArray.length; i++) {
+        correctItem = i + 1;
+
+        if (sequenceArray[i] !== correctItem) {
+          return correctItem;
+        } else {
+          continue;
+        }
+        correctItem++;
+      }
+
+      return 0;
+    } else {
+      return 1;
+    }
+  } else {
+    return 0;
+  }
+}
+
+console.log(findMissingNumber('2 6 4 1'));
