@@ -237,7 +237,6 @@ function findMissingNumber(sequence){
           return !isNaN(item);
         }),
         correctItem;
-        console.log(isCorrect);
 
     if (isCorrect) {
       for (var i = 0; i < sequenceArray.length; i++) {
@@ -261,3 +260,35 @@ function findMissingNumber(sequence){
 }
 
 console.log(findMissingNumber('2 6 4 1'));
+
+
+// Calculation buying a car
+
+function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
+  var savedMoney = 0,
+      priceDifference = startPriceNew - startPriceOld,
+      monthCount = Math.ceil(priceDifference / savingperMonth);
+
+  if (startPriceOld < 0 || startPriceOld < 0 || savingperMonth < 0 || percentLossByMonth < 0) {
+    return undefined;
+  } else if (startPriceOld - startPriceNew >= 0) {
+    return [0, Math.abs(startPriceOld - startPriceNew)];
+  }
+
+  for (var i = 1; i <= monthCount; i++) {
+    if (i % 2 === 0) {
+      percentLossByMonth += 0.5;
+    }
+
+    startPriceOld = startPriceOld - startPriceOld * ( percentLossByMonth / 100 );
+    startPriceNew = startPriceNew - startPriceNew * ( percentLossByMonth / 100 );
+    savedMoney += savingperMonth;
+
+    if ((savedMoney + startPriceOld) - startPriceNew >= 0) {
+      return [i, Math.round((savedMoney + startPriceOld) - startPriceNew)]
+    }
+  }
+}
+
+console.log(nbMonths(2000, 8000, 1000, 1.5));
+console.log(nbMonths(12000, 8000, 1000, 1.5));
