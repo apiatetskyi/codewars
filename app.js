@@ -230,10 +230,10 @@ function findMissingNumber(sequence){
   }
 
   if (sequence) {
-    var sequenceArray = sequence.split(' ').map(function(sequenceItem){
+    var sequenceArray = sequence.split(' ').map(function (sequenceItem) {
       return Number(sequenceItem);
     }).sort(compareNumeric),
-        isCorrect = sequenceArray.every(function(item){
+        isCorrect = sequenceArray.every(function (item) {
           return !isNaN(item);
         }),
         correctItem;
@@ -264,7 +264,7 @@ console.log(findMissingNumber('2 6 4 1'));
 
 // Calculation buying a car
 
-function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth){
+function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth) {
   var savedMoney = 0,
       priceDifference = startPriceNew - startPriceOld,
       monthCount = Math.ceil(priceDifference / savingperMonth);
@@ -292,3 +292,25 @@ function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMon
 
 console.log(nbMonths(2000, 8000, 1000, 1.5));
 console.log(nbMonths(12000, 8000, 1000, 1.5));
+
+
+// Sum of a sequence
+function sequenceSum(begin, end, step) {
+  if (begin > end) {
+    return 0;
+  }
+
+  var sum = begin,
+      increment = begin + step;
+
+  while (increment <= end) {
+    sum += increment;
+    increment += step;
+  }
+
+  return sum;
+}
+
+console.log(sequenceSum(2, 6, 2));
+console.log(sequenceSum(1, 5, 1));
+console.log(sequenceSum(1, 5, 3));
