@@ -314,3 +314,10 @@ function sequenceSum(begin, end, step) {
 console.log(sequenceSum(2, 6, 2));
 console.log(sequenceSum(1, 5, 1));
 console.log(sequenceSum(1, 5, 3));
+
+
+// Find the next perfect square
+function findNextSquare(sq) {
+  var powerBase = Math.sqrt(sq) + 1;
+  return (powerBase % 1 === 0) ? Math.pow(powerBase, 2) : -1;
+}
