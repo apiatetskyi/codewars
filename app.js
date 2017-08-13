@@ -1,8 +1,8 @@
 'use strict'
 
-/* Powers of 2
+/* Powers of 2 return list of all powers of 2 from 0 to n
 ============================================================ */
-console.log('\n%cPowers of 2', 'font-weight: 700;')
+console.log('\n%cPowers of 2 return list of all powers of 2 from 0 to n', 'font-weight: 700;')
 
 function powersOfTwo(basis, n){
   var result;
@@ -22,7 +22,9 @@ function powersOfTwo(basis, n){
   return resultList;
 }
 
+powersOfTwo(2, 2);
 powersOfTwo(2, 4);
+powersOfTwo(2, 6);
 
 
 
@@ -44,11 +46,11 @@ function reverse(string){
 console.log(reverse('Some string that will be reversed'));
 
 // Best Practices
-function reverseRight(string){
+function reverse(string){
   return string.split(' ').reverse().join(' ');
 }
 
-console.log(reverseRight('Some string that will be reversed'));
+console.log(reverse('Do or do not — there is no try'));
 
 
 
@@ -76,6 +78,8 @@ function sumDigPow(a, b) {
 }
 
 console.log(sumDigPow(90, 136));
+console.log(sumDigPow(50, 1236));
+console.log(sumDigPow(900, 13236));
 
 
 
@@ -97,10 +101,10 @@ function longest(s1, s2) {
   return result.sort().join('');
 }
 
-var str1 = 'asfkjalfjasehurnmAbco1 _"sdlfkjghsdweufsdjklz';
-var str2 = 'ewuytiuertiqaaaaaaeuryw123124     ____=123*/pqiwuemnvskljhf';
-
-console.log(longest(str1, str2));
+console.log(longest('asdasd', 'tyuigjk'));
+console.log(longest('bvcncvbncvn', 'stwqer234werh r2'));
+console.log(longest('ytiwefdsm;hlksfgfdf', '1244df'));
+console.log(longest(longest('asdasd', 'tyuigjk'), longest('bvcncvbncvn', 'stwqer234werh r2')));
 
 
 
@@ -388,3 +392,13 @@ console.log(findNextSquare(122));
 
 
 
+/* Triangel in the loop (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cTriangel in the loop (Eloquent JavaScript)', 'font-weight: 700;')
+
+var str = '';
+
+for (var i = 0; i < 7; i++) {
+  str += '#';
+  console.log(str);
+}
