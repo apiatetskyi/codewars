@@ -1,6 +1,9 @@
 'use strict'
 
-// Powers of 2
+/* Powers of 2
+============================================================ */
+console.log('\n%cPowers of 2', 'font-weight: 700;')
+
 function powersOfTwo(basis, n){
   var result;
   var resultList = [1];
@@ -23,7 +26,10 @@ powersOfTwo(2, 4);
 
 
 
-// Reversing Words in a String
+/* Reversing Words in a String
+============================================================ */
+console.log('\n%cReversing Words in a String', 'font-weight: 700;')
+
 function reverse(string){
   var arr = string.split(' ');
   var newArr = [];
@@ -35,17 +41,21 @@ function reverse(string){
   return newArr.join(' ');
 }
 
+console.log(reverse('Some string that will be reversed'));
+
 // Best Practices
 function reverseRight(string){
   return string.split(' ').reverse().join(' ');
 }
 
-console.log(reverse('Some string that will be reversed'));
 console.log(reverseRight('Some string that will be reversed'));
 
 
 
-// Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!
+/* Find number abc = a^1 + b^2 + c^3 in range
+============================================================ */
+console.log('\n%cFind number abc = a^1 + b^2 + c^3 in range', 'font-weight: 700;')
+
 function sumDigPow(a, b) {
   var result = [];
 
@@ -69,7 +79,10 @@ console.log(sumDigPow(90, 136));
 
 
 
-// Two to One
+/* Get str from 2 strs without char repetition. Sort result str
+============================================================ */
+console.log('\n%cGet str from 2 strs without char repetition. Sort result str', 'font-weight: 700;')
+
 function longest(s1, s2) {
   var result = [],
   concatStr = s1 + s2,
@@ -91,7 +104,10 @@ console.log(longest(str1, str2));
 
 
 
-// Calculator constructor (learn.javascript.ru)
+/* Calculator constructor (learn.javascript.ru)
+============================================================ */
+console.log('\n%cCalculator constructor (learn.javascript.ru)', 'font-weight: 700;')
+
 function Calculator() {
   this.read = function() {
     this.a = +prompt('Enter a', '0');
@@ -108,7 +124,6 @@ function Calculator() {
 }
 
 var calculator = new Calculator();
-var calculator2 = new Calculator();
 
 // calculator.read();
 console.log('Sum = ', calculator.sum());
@@ -116,7 +131,10 @@ console.log('Multiplication = ', calculator.mul());
 
 
 
-// Calculator with addMethod() (learn.javascript.ru)
+/* Calculator with addMethod() (learn.javascript.ru)
+============================================================ */
+console.log('\n%cCalculator with addMethod() (learn.javascript.ru)', 'font-weight: 700;')
+
 function PowerCalc() {
   var methods = {
     '+': function(a, b) {return a + b},
@@ -156,7 +174,9 @@ console.log(powerCalc.calculate('8 / 4'));
 
 
 
-// Keep up the hoop
+/* Keep up the hoop
+============================================================ */
+console.log('\n%cKeep up the hoop', 'font-weight: 700;')
 function hoopCount(n) {
   return (n < 10 && n >= 0 ) ? 'Keep at it until you get it' : 'Great, now move on to tricks';
 }
@@ -168,7 +188,9 @@ console.log(hoopCount(2));
 
 
 
-// I love you, a little , a lot, passionately ... not at all
+/* I love you, a little , a lot, passionately ... not at all
+============================================================ */
+console.log('\n%cI love you, a little , a lot, passionately ... not at all', 'font-weight: 700;')
 function howMuchILoveYou(nbPetals) {
   var phraseList = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
 
@@ -183,7 +205,10 @@ console.log(howMuchILoveYou(6));
 console.log(howMuchILoveYou(2));
 
 
-// Prototype in JS
+
+/* cPrototype in JS (learn.javascript.ru)
+============================================================ */
+console.log('\n%cPrototype in JS (learn.javascript.ru)', 'font-weight: 700;')
 
 var gadget = {
   power: true,
@@ -204,15 +229,18 @@ console.log(new MobilePhone('Apple', 'Iphone 7'));
 console.log(emptyArray);
 
 
-// Find the capitals
 
-function capitals(word) {
+/* Find the capitals
+============================================================ */
+console.log('\n%cFind the capitals', 'font-weight: 700;')
+
+function capitalsIndex(word) {
   var capitalChar = [];
 
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
 
-    if (char == char.toUpperCase()) {
+    if (/^[a-zA-Z]+$/.test(char) && char == char.toUpperCase()) {
       capitalChar.push(i);
     }
 
@@ -221,8 +249,29 @@ function capitals(word) {
   return capitalChar;
 }
 
+function capitals(word) {
+  var capitalChar = [];
 
-// Broken sequence
+  for (var i = 0; i < word.length; i++) {
+    var char = word.charAt(i);
+
+    if (/^[a-zA-Z]+$/.test(char) && char == char.toUpperCase()) {
+      capitalChar.push(char);
+    }
+
+  }
+
+  return capitalChar;
+}
+
+console.log(capitalsIndex('Hello woRlD!'));
+console.log(capitals('Hello woRlD!'));
+
+
+
+/* Broken sequence
+============================================================ */
+console.log('\n%cBroken sequence', 'font-weight: 700;')
 
 function findMissingNumber(sequence){
   function compareNumeric(a, b) {
@@ -262,7 +311,10 @@ function findMissingNumber(sequence){
 console.log(findMissingNumber('2 6 4 1'));
 
 
-// Calculation buying a car
+
+/* Calculation buying a car
+============================================================ */
+console.log('\n%cCalculation buying a car', 'font-weight: 700;')
 
 function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth) {
   var savedMoney = 0,
@@ -294,7 +346,11 @@ console.log(nbMonths(2000, 8000, 1000, 1.5));
 console.log(nbMonths(12000, 8000, 1000, 1.5));
 
 
-// Sum of a sequence
+
+/* Sum of a sequence
+============================================================ */
+console.log('\n%cSum of a sequence', 'font-weight: 700;')
+
 function sequenceSum(begin, end, step) {
   if (begin > end) {
     return 0;
@@ -316,8 +372,19 @@ console.log(sequenceSum(1, 5, 1));
 console.log(sequenceSum(1, 5, 3));
 
 
-// Find the next perfect square
+
+/* Find the next perfect square
+============================================================ */
+console.log('\n%cFind the next perfect square', 'font-weight: 700;')
+
 function findNextSquare(sq) {
   var powerBase = Math.sqrt(sq) + 1;
   return (powerBase % 1 === 0) ? Math.pow(powerBase, 2) : -1;
 }
+
+console.log(findNextSquare(144));
+console.log(findNextSquare(121));
+console.log(findNextSquare(122));
+
+
+
