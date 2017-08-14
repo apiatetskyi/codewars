@@ -210,7 +210,7 @@ console.log(howMuchILoveYou(2));
 
 
 
-/* cPrototype in JS (learn.javascript.ru)
+/* Prototype in JS (learn.javascript.ru)
 ============================================================ */
 console.log('\n%cPrototype in JS (learn.javascript.ru)', 'font-weight: 700;')
 
@@ -244,7 +244,7 @@ function capitalsIndex(word) {
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
 
-    if (/^[a-zA-Z]+$/.test(char) && char == char.toUpperCase()) {
+    if (/^[a-zA-Zа-яА-Я]+$/.test(char) && char == char.toUpperCase()) {
       capitalChar.push(i);
     }
 
@@ -259,7 +259,7 @@ function capitals(word) {
   for (var i = 0; i < word.length; i++) {
     var char = word.charAt(i);
 
-    if (/^[a-zA-Z]+$/.test(char) && char == char.toUpperCase()) {
+    if (/^[a-zA-Zа-яА-Я]+$/.test(char) && char == char.toUpperCase()) {
       capitalChar.push(char);
     }
 
@@ -402,3 +402,34 @@ for (var i = 0; i < 7; i++) {
   str += '#';
   console.log(str);
 }
+
+
+
+/* FizzBuzz (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cFizzBuzz (Eloquent JavaScript)', 'font-weight: 700;')
+console.log('%clook at solution in the source code ', 'color: #ccc;')
+
+for (var i = 1; i <= 100; i++) {
+  break;
+  if (!(i % 3) && !(i % 5)) {
+    console.log('FizzBuzz');
+  } else if (!(i % 3)) {
+    console.log('Fizz');
+  } else if (!(i % 5)) {
+    console.log('Bazz');
+  } else {
+    console.log(i);
+  }
+}
+
+// Author solution
+/* for (var n = 1; n <= 100; n++) {
+  break;
+  var output = "";
+  if (n % 3 == 0)
+    output += "Fizz";
+  if (n % 5 == 0)
+    output += "Buzz";
+  console.log(output || n);
+} */
