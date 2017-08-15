@@ -410,7 +410,7 @@ for (var i = 0; i < 7; i++) {
 console.log('\n%cFizzBuzz (Eloquent JavaScript)', 'font-weight: 700;')
 console.log('%clook at solution in the source code ', 'color: #ccc;')
 
-for (var i = 1; i <= 100; i++) {
+/* for (var i = 1; i <= 100; i++) {
   break;
   if (!(i % 3) && !(i % 5)) {
     console.log('FizzBuzz');
@@ -421,7 +421,7 @@ for (var i = 1; i <= 100; i++) {
   } else {
     console.log(i);
   }
-}
+} */
 
 // Author solution
 /* for (var n = 1; n <= 100; n++) {
@@ -433,3 +433,21 @@ for (var i = 1; i <= 100; i++) {
     output += "Buzz";
   console.log(output || n);
 } */
+
+
+// A Chain adding function
+console.log('\n%cA Chain adding function', 'font-weight: 700;')
+
+function add(n) {
+  var result = function(m){
+    return add(n + m);
+  }
+
+  result.valueOf = result.toString = function() {
+    return n;
+  };
+
+  return result;
+}
+
+console.log(add(2)(3)(4));
