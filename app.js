@@ -411,7 +411,6 @@ console.log('\n%cFizzBuzz (Eloquent JavaScript)', 'font-weight: 700;')
 console.log('%clook at solution in the source code ', 'color: #ccc;')
 
 /* for (var i = 1; i <= 100; i++) {
-  break;
   if (!(i % 3) && !(i % 5)) {
     console.log('FizzBuzz');
   } else if (!(i % 3)) {
@@ -425,7 +424,6 @@ console.log('%clook at solution in the source code ', 'color: #ccc;')
 
 // Author solution
 /* for (var n = 1; n <= 100; n++) {
-  break;
   var output = "";
   if (n % 3 == 0)
     output += "Fizz";
@@ -435,7 +433,9 @@ console.log('%clook at solution in the source code ', 'color: #ccc;')
 } */
 
 
-// A Chain adding function
+
+/* A Chain adding function
+============================================================ */
 console.log('\n%cA Chain adding function', 'font-weight: 700;')
 
 function add(n) {
@@ -451,3 +451,26 @@ function add(n) {
 }
 
 console.log(add(2)(3)(4));
+
+
+
+/* Chess board (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cChess board (Eloquent JavaScript)', 'font-weight: 700;')
+
+var chessBoard = '';
+var boardSize = 8;
+
+for (var i = 0; i < boardSize; i++) {
+  for (var j = 0; j < boardSize; j++) {
+    if ((i + j) % 2 === 0) {
+      chessBoard += '#';
+    } else {
+      chessBoard += ' ';
+    }
+  }
+
+  chessBoard += '\n';
+}
+
+console.log(chessBoard);
