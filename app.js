@@ -474,3 +474,84 @@ for (var i = 0; i < boardSize; i++) {
 }
 
 console.log(chessBoard);
+
+
+
+/* Minimum (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cMinimum (Eloquent JavaScript)', 'font-weight: 700;')
+
+function getMinimum(arg1, arg2) {
+  return (arg1 > arg2) ? arg2 : arg1;
+};
+
+console.log(getMinimum(0, 10));
+console.log(getMinimum(0, -10));
+
+
+
+/* isEven function (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cisEven function (Eloquent JavaScript)', 'font-weight: 700;')
+
+function isEven(n) {
+  if (n === 0) {
+    return true;
+  } else if (n === 1) {
+    return false;
+  } else if (n < 1) {
+    return isEven(-n)
+  } else {
+    return isEven(n - 2);
+  }
+};
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
+
+
+
+/* countBs function (Eloquent JavaScript)
+============================================================ */
+console.log('\n%ccountBs function (Eloquent JavaScript)', 'font-weight: 700;')
+
+function countBs(str) {
+  var counted = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) === 'B') {
+      counted += 1;
+    } else {
+      continue;
+    }
+  }
+
+  return counted;
+}
+
+console.log(countBs('Aasdb Basd B b'));
+console.log(countBs('Aasdb Bas b'));
+console.log(countBs('Aasd b'));
+
+
+
+/* countChars function (Eloquent JavaScript)
+============================================================ */
+console.log('\n%ccountChars function (Eloquent JavaScript)', 'font-weight: 700;')
+
+function countChar(str, char) {
+  var counted = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (str.charAt(i) == char) {
+      counted += 1;
+    } else {
+      continue;
+    }
+  }
+
+  return counted;
+}
+
+console.log(countChar('Aasdb Basd B b', 'a'));
+console.log(countChar('Aasdb Bas b', 'a'));
+console.log(countChar('Aasd b', 'a'));
