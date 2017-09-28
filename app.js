@@ -650,3 +650,27 @@ function range(start, end) {
 
   return range;
 }
+
+console.log(range(6,7));
+console.log(range(1,4));
+console.log(range(22,26));
+
+
+
+/* Sum function (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cSum function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+
+function sum(rangeArray) {
+  var sum = 0;
+
+  for (var i = 0; i < rangeArray.length; i++) {
+    sum += rangeArray[i];
+  }
+
+  return sum;
+}
+
+console.log(sum(range(6,7)));
+console.log(sum(range(1,10)));
+console.log(sum(range(22,26)));
