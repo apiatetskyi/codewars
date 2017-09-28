@@ -583,7 +583,7 @@ function tableFor(event, journal) {
 
   for (var i = 0; i < journal.length; i++) {
     var entry = journal[i], // get events array from journal
-      index = 0; // set start index
+        index = 0; // set start index
 
     if (hasEvent(event, entry)) {
       index += 1;
@@ -632,4 +632,21 @@ for (var event in correlations) {
   if (correlation > 0.1 || correlation < -0.1) {
     console.log(event + ": " + correlation);
   }
+}
+
+
+
+/* Range function (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cRange function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+
+function range(start, end) {
+  var range = [];
+
+  while (start <= end) {
+    range.push(start);
+    start++;
+  }
+
+  return range;
 }
