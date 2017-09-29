@@ -2,7 +2,7 @@
 
 /* Powers of 2 return list of all powers of 2 from 0 to n
 ============================================================ */
-console.log('\n%cPowers of 2 return list of all powers of 2 from 0 to n', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cPowers of 2 return list of all powers of 2 from 0 to n', 'font-weight: 700; font-size: 16px;');
 
 function powersOfTwo(basis, n){
   var result;
@@ -30,7 +30,7 @@ powersOfTwo(2, 6);
 
 /* Reversing Words in a String
 ============================================================ */
-console.log('\n%cReversing Words in a String', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cReversing Words in a String', 'font-weight: 700; font-size: 16px;');
 
 function reverse(string){
   var arr = string.split(' ');
@@ -56,7 +56,7 @@ console.log(reverse('Do or do not — there is no try'));
 
 /* Find number abc = a^1 + b^2 + c^3 in range
 ============================================================ */
-console.log('\n%cFind number abc = a^1 + b^2 + c^3 in range', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cFind number abc = a^1 + b^2 + c^3 in range', 'font-weight: 700; font-size: 16px;');
 
 function sumDigPow(a, b) {
   var result = [];
@@ -85,7 +85,7 @@ console.log(sumDigPow(900, 13236));
 
 /* Get str from 2 strs without char repetition. Sort result str
 ============================================================ */
-console.log('\n%cGet str from 2 strs without char repetition. Sort result str', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cGet str from 2 strs without char repetition. Sort result str', 'font-weight: 700; font-size: 16px;');
 
 function longest(s1, s2) {
   var result = [],
@@ -110,7 +110,7 @@ console.log(longest(longest('asdasd', 'tyuigjk'), longest('bvcncvbncvn', 'stwqer
 
 /* Calculator constructor (learn.javascript.ru)
 ============================================================ */
-console.log('\n%cCalculator constructor (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cCalculator constructor (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;');
 
 function Calculator() {
   this.read = function() {
@@ -137,7 +137,7 @@ console.log('Multiplication = ', calculator.mul());
 
 /* Calculator with addMethod() (learn.javascript.ru)
 ============================================================ */
-console.log('\n%cCalculator with addMethod() (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cCalculator with addMethod() (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;');
 
 function PowerCalc() {
   var methods = {
@@ -180,7 +180,7 @@ console.log(powerCalc.calculate('8 / 4'));
 
 /* Keep up the hoop
 ============================================================ */
-console.log('\n%cKeep up the hoop', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cKeep up the hoop', 'font-weight: 700; font-size: 16px;');
 function hoopCount(n) {
   return (n < 10 && n >= 0 ) ? 'Keep at it until you get it' : 'Great, now move on to tricks';
 }
@@ -194,7 +194,7 @@ console.log(hoopCount(2));
 
 /* I love you, a little , a lot, passionately ... not at all
 ============================================================ */
-console.log('\n%cI love you, a little , a lot, passionately ... not at all', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cI love you, a little , a lot, passionately ... not at all', 'font-weight: 700; font-size: 16px;');
 function howMuchILoveYou(nbPetals) {
   var phraseList = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
 
@@ -212,7 +212,7 @@ console.log(howMuchILoveYou(2));
 
 /* Prototype in JS (learn.javascript.ru)
 ============================================================ */
-console.log('\n%cPrototype in JS (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cPrototype in JS (learn.javascript.ru)', 'font-weight: 700; font-size: 16px;');
 
 var gadget = {
   power: true,
@@ -236,7 +236,7 @@ console.log(emptyArray);
 
 /* Find the capitals
 ============================================================ */
-console.log('\n%cFind the capitals', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cFind the capitals', 'font-weight: 700; font-size: 16px;');
 
 function capitalsIndex(word) {
   var capitalChar = [];
@@ -275,7 +275,7 @@ console.log(capitals('Hello woRlD!'));
 
 /* Broken sequence
 ============================================================ */
-console.log('\n%cBroken sequence', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cBroken sequence', 'font-weight: 700; font-size: 16px;');
 
 function findMissingNumber(sequence){
   function compareNumeric(a, b) {
@@ -318,7 +318,7 @@ console.log(findMissingNumber('2 6 4 1'));
 
 /* Calculation buying a car
 ============================================================ */
-console.log('\n%cCalculation buying a car', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cCalculation buying a car', 'font-weight: 700; font-size: 16px;');
 
 function nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth) {
   var savedMoney = 0,
@@ -353,7 +353,7 @@ console.log(nbMonths(12000, 8000, 1000, 1.5));
 
 /* Sum of a sequence
 ============================================================ */
-console.log('\n%cSum of a sequence', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cSum of a sequence', 'font-weight: 700; font-size: 16px;');
 
 function sequenceSum(begin, end, step) {
   if (begin > end) {
@@ -379,7 +379,7 @@ console.log(sequenceSum(1, 5, 3));
 
 /* Find the next perfect square
 ============================================================ */
-console.log('\n%cFind the next perfect square', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cFind the next perfect square', 'font-weight: 700; font-size: 16px;');
 
 function findNextSquare(sq) {
   var powerBase = Math.sqrt(sq) + 1;
@@ -394,7 +394,7 @@ console.log(findNextSquare(122));
 
 /* Triangel in the loop (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cTriangel in the loop (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cTriangel in the loop (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 var str = '';
 
@@ -407,7 +407,7 @@ for (var i = 0; i < 7; i++) {
 
 /* FizzBuzz (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cFizzBuzz (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cFizzBuzz (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 console.log('%clook at solution in the source code ', 'color: #ccc;')
 
 /* for (var i = 1; i <= 100; i++) {
@@ -436,7 +436,7 @@ console.log('%clook at solution in the source code ', 'color: #ccc;')
 
 /* A Chain adding function
 ============================================================ */
-console.log('\n%cA Chain adding function', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cA Chain adding function', 'font-weight: 700; font-size: 16px;');
 
 function add(n) {
   var result = function(m){
@@ -456,7 +456,7 @@ console.log(add(2)(3)(4));
 
 /* Chess board (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cChess board (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cChess board (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 var chessBoard = '';
 var boardSize = 8;
@@ -479,7 +479,7 @@ console.log(chessBoard);
 
 /* Minimum (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cMinimum (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cMinimum (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function getMinimum(arg1, arg2) {
   return (arg1 > arg2) ? arg2 : arg1;
@@ -492,7 +492,7 @@ console.log(getMinimum(0, -10));
 
 /* isEven function (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cisEven function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cisEven function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function isEven(n) {
   if (n === 0) {
@@ -514,7 +514,7 @@ console.log(isEven(-1));
 
 /* countBs function (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%ccountBs function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%ccountBs function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function countBs(str) {
   var counted = 0;
@@ -537,7 +537,7 @@ console.log(countBs('Aasd b'));
 
 /* countChars function (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%ccountChars function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%ccountChars function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function countChar(str, char) {
   var counted = 0;
@@ -560,7 +560,7 @@ console.log(countChar('Aasd b', 'a'));
 
 /* Jacque transformation (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cJacque transformation (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cJacque transformation (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 var journalSquirrle = window.JOURNAL;
 
@@ -619,13 +619,13 @@ function gatherCorrelations(journal) {
 var correlations = gatherCorrelations(journalSquirrle);
 
 
-console.log('\n%cCorrelation value of each event\n\n', 'font-weight: 400; color: #777;')
+console.log('\n%cCorrelation value of each event\n\n', 'font-weight: 400; color: #777;');
 
 for (var event in correlations) {
   console.log(event + ': ' + correlations[event]);
 }
 
-console.log('\n%cEvents that has correlation more than 0.1 and less than -0.1  \n\n', 'font-weight: 400; color: #777;')
+console.log('\n%cEvents that has correlation more than 0.1 and less than -0.1  \n\n', 'font-weight: 400; color: #777;');
 for (var event in correlations) {
   var correlation = correlations[event];
 
@@ -638,7 +638,7 @@ for (var event in correlations) {
 
 /* Range function with step argument (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cRange function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cRange function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function range(start, end, step) {
   var range = [];
@@ -682,7 +682,7 @@ console.log(range(22, 2, -4));
 
 /* Sum function (Eloquent JavaScript)
 ============================================================ */
-console.log('\n%cSum function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
+console.log('\n%cSum function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
 function sum(rangeArray) {
   var sum = 0;
