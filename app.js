@@ -697,3 +697,33 @@ function sum(rangeArray) {
 console.log(sum(range(6,7)));
 console.log(sum(range(1,10)));
 console.log(sum(range(22,26)));
+
+
+
+/* Reversing an array (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cReversing an array (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+function reverseArray(array) {
+  var output = [];
+  for (var i = array.length - 1; i >= 0; i--)
+    output.push(array[i]);
+  return output;
+}
+
+function reverseArrayInPlace(array) {
+  for (var i = 0; i < Math.floor(array.length / 2); i++) {
+    var old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}
+
+var testArr = [1,5,2,3];
+
+console.log(reverseArray(testArr));
+console.log(testArr);
+
+console.log(reverseArrayInPlace(testArr));
+console.log(testArr);
