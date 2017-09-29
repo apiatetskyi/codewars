@@ -636,24 +636,47 @@ for (var event in correlations) {
 
 
 
-/* Range function (Eloquent JavaScript)
+/* Range function with step argument (Eloquent JavaScript)
 ============================================================ */
 console.log('\n%cRange function (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;')
 
-function range(start, end) {
+function range(start, end, step) {
   var range = [];
 
-  while (start <= end) {
-    range.push(start);
-    start++;
+  if (step > 0) {
+    while (start <= end) {
+      range.push(start);
+      start+= step;
+    }
+  } else {
+    while (start >= end) {
+      range.push(start);
+      start+= step;
+    }
   }
 
   return range;
 }
 
-console.log(range(6,7));
-console.log(range(1,4));
-console.log(range(22,26));
+// Solution in the book
+function range(start, end, step) {
+  if (step == null) step = 1;
+  var array = [];
+
+  if (step > 0) {
+    for (var i = start; i <= end; i += step)
+      array.push(i);
+  } else {
+    for (var i = start; i >= end; i += step)
+      array.push(i);
+  }
+  return array;
+}
+
+console.log(range(6, 7));
+console.log(range(1, 4, 2));
+console.log(range(1, 10, 2));
+console.log(range(22, 2, -4));
 
 
 
