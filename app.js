@@ -737,3 +737,15 @@ console.log('\n%cWorking out with JSON (Eloquent JavaScript)', 'font-weight: 700
 var ancestry = JSON.parse(window.ANCESTRY_FILE);
 
 console.log(ancestry);
+
+
+
+/* Flattening (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cFlattening (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+var array = [[1, 2, 3], [4, 5], [6]];
+
+console.log(array.reduce(function(previousValue, currentValue) {
+  return previousValue.concat(currentValue);
+}, []));
