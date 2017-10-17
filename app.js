@@ -727,3 +727,13 @@ console.log(testArr);
 
 console.log(reverseArrayInPlace(testArr));
 console.log(testArr);
+
+
+
+/* Working out with JSON (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cWorking out with JSON (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+var ancestry = JSON.parse(window.ANCESTRY_FILE);
+
+console.log(ancestry);
