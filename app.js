@@ -749,3 +749,28 @@ var array = [[1, 2, 3], [4, 5], [6]];
 console.log(array.reduce(function(previousValue, currentValue) {
   return previousValue.concat(currentValue);
 }, []));
+
+
+
+/* Mother-child age difference (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cMother-child age difference (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+function  average(array) {
+  function plus(a, b) { return a + b; }
+  return array.reduce(plus) / array.length;
+}
+
+var byName = {};
+
+ancestry.forEach(function(person) {
+  byName[person.name] = person;
+});
+
+var ageDifference = ancestry.filter(function(person) {
+    return byName[person.mother] != null;
+  }).map(function(person) {
+    return person.born - byName[person.mother].born;
+  });
+
+console.log(average(ageDifference));
