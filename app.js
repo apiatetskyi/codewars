@@ -756,7 +756,7 @@ console.log(array.reduce(function(previousValue, currentValue) {
 ============================================================ */
 console.log('\n%cMother-child age difference (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
 
-function  average(array) {
+function average(array) {
   function plus(a, b) { return a + b; }
   return array.reduce(plus) / array.length;
 }
@@ -774,3 +774,37 @@ var ageDifference = ancestry.filter(function(person) {
   });
 
 console.log(average(ageDifference));
+
+
+/* Life duration (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cLife duration (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+function groupBy(array, groupOf) {
+  var group = {};
+
+  array.forEach(function(element) {
+    var groupName = groupOf(element);
+
+    if (!group.hasOwnProperty(groupName)) {
+      group[groupName] = [element];
+    } else {
+      group[groupName].push(element);
+    }
+  });
+
+  return group;
+}
+
+var byCentury = groupBy(ancestry, function(person) {
+  return Math.ceil(person.died / 100);
+});
+
+for (var century in byCentury) {
+  if (byCentury.hasOwnProperty(century)) {
+    var ages = byCentury[century].map(function(person) {
+      return person.died - person.born;
+    });
+    console.log(century + ': ' + average(ages));
+  }
+}
