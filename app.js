@@ -808,3 +808,114 @@ for (var century in byCentury) {
     console.log(century + ': ' + average(ages));
   }
 }
+
+
+/* Table formatting (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cTable formatting (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+function rowHeights(rows) {
+  return rows.map(function(row) {
+    return row.reduce(function(currentMax, cell) {
+      return Math.max(currentMax, cell.minHeight());
+    }, 0);
+  });
+}
+
+function colWidths(rows) {
+  return rows[0].map(function(_, colNum,) {
+    return rows.reduce(function(currentMax, row) {
+      return Math.max(currentMax, row[colNum].minWidth());
+    }, 0);
+  });
+}
+
+function repeat(string, times) {
+  var result = '';
+
+  for (var i = 0; i < times; i++) {
+    result += string;
+  }
+
+  return result;
+}
+
+function drawTable(rows) {
+  var widths = colWidths(rows),
+      heights = rowHeights(rows);
+
+  function drawCellLine(blocks, lineNo) {
+    return blocks.map(function(block) {
+      return block[lineNo];
+    }).join(' ');
+  }
+
+  function drawRow(row, rowNum) {
+    var blocks = row.map(function(cell, colNum) {
+      return cell.draw(widths[colNum], heights[rowNum]);
+    });
+
+    return blocks[0].map(function(_, lineNo) {
+      return drawCellLine(blocks, lineNo);
+    }).join('\n');
+  }
+
+  return rows.map(drawRow).join('\n');
+};
+
+function TableCell(text) {
+  this.text = text.split('\n');
+};
+
+TableCell.prototype.minWidth = function() {
+  return this.text.reduce(function(width, currentCellLine) {
+    return Math.max(width, currentCellLine.length);
+  }, 0);
+};
+
+TableCell.prototype.minHeight = function() {
+  return this.text.length;
+};
+
+TableCell.prototype.draw = function(width, height) {
+  var result = [];
+
+  for (var i = 0; i < height; i++) {
+    var cellLine = this.text[i] || '';
+    result.push(cellLine + repeat(' ', width - cellLine.length));
+  }
+
+  return result;
+};
+
+function UnderlinedCell(inner) {
+  this.inner = inner;
+}
+
+UnderlinedCell.prototype.minWidth = function(inner) {
+  return this.inner.minWidth();
+};
+
+UnderlinedCell.prototype.minHeight = function(text) {
+  return this.inner.minHeight();
+};
+
+UnderlinedCell.prototype.draw = function(width, height) {
+  return this.inner.draw(width, height).concat([repeat('-', width)]);
+};
+
+function setTableData(data) {
+  var keys = Object.keys(data[0]),
+      tableTitles = keys.map(function(name) {
+        return new UnderlinedCell(new TableCell(name));
+      }),
+      tableBody = data.map(function(row) {
+        return keys.map(function(name) {
+          return new TableCell(String(row[name]));
+        });
+      });
+
+  return [tableTitles].concat(tableBody);
+}
+
+console.log(drawTable(setTableData(window.MOUNTAINS)));
