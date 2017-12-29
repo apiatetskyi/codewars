@@ -919,3 +919,31 @@ function setTableData(data) {
 }
 
 console.log(drawTable(setTableData(window.MOUNTAINS)));
+
+
+/* A Vector type (Eloquent JavaScript)
+============================================================ */
+console.log('\n%cA Vector type (Eloquent JavaScript)', 'font-weight: 700; font-size: 16px;');
+
+function Vector(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+Vector.prototype.plus = function(vector) {
+  var resultX = this.x + vector.x,
+      resultY = this.y + vector.y;
+  return new Vector(resultX, resultY);
+};
+
+Vector.prototype.minus = function(vector) {
+  var resultX = this.x - vector.x,
+      resultY = this.y - vector.y;
+  return new Vector(resultX, resultY);
+};
+
+Object.defineProperty(Vector.prototype, 'length', {
+  get: function() {
+    return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+  }
+});
